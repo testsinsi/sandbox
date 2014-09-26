@@ -1,0 +1,20 @@
+apply plugin: 'idea'
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'scala'
+    
+    repositories {
+        mavenCentral()
+    }
+    
+    dependencies {
+        compile 'org.scala-lang:scala-library-all:2.11.1'
+        compile 'com.typesafe.akka:akka-actor_2.11:2.3.4'
+        testCompile 'org.scalatest:scalatest_2.11:2.2.1'
+        testCompile 'com.typesafe.akka:akka-testkit_2.11:2.3.4'
+    }
+
+    project(':sub01') {
+    }
+}
